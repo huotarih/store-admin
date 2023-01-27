@@ -10,7 +10,7 @@ RUN rm -rf node_modules
 
 RUN apt-get update
 
-RUN yarn install
+RUN yarn
 
 RUN yarn build
 
