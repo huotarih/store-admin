@@ -10,13 +10,9 @@ RUN rm -rf node_modules
 
 RUN apt-get update
 
-RUN yarn add sharp
-
-RUN yarn global add gatsby-cli
-
 RUN yarn install
 
-RUN gatsby build
+RUN yarn build
 
 FROM nginx
 
