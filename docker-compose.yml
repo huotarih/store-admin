@@ -1,0 +1,16 @@
+version: "1"
+services:
+  admin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: admin:prod
+    depends_on:
+      - backend
+    container_name: medusa-admin
+    environment:
+      NODE_OPTIONS: --openssl-legacy-provider
+volumes:
+  node_modules:
+networks:
+  default:
