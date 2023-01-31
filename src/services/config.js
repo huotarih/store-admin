@@ -1,4 +1,4 @@
 const medusaUrl =
-  __MEDUSA_BACKEND_URL__ || "https://solutionss-store.huotari.art"
+  __MEDUSA_BACKEND_URL__ || "https://solutions-store.huotari.art"
 
 export { medusaUrl }
