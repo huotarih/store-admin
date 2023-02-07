@@ -5,11 +5,12 @@ services:
       context: .
       dockerfile: Dockerfile
     image: admin:prod
-    depends_on:
-      - backend
     container_name: medusa-admin
     environment:
       NODE_OPTIONS: --openssl-legacy-provider
+    ports:
+      - "7000:7000"
+
 volumes:
   node_modules:
 networks:

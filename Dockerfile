@@ -14,10 +14,12 @@ RUN yarn
 
 RUN yarn build
 
-FROM nginx
+FROM node:18-alpine
 
-EXPOSE 80 
+WORKDIR /app/admin
 
-COPY --from=builder /app/admin/public /usr/share/nginx/html
+EXPOSE 7000
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+COPY --from=builder /app/admin/ /app/admin/
+
+ENTRYPOINT ["yarn", "serve"]
