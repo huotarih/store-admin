@@ -20,4 +20,4 @@ EXPOSE 80
 
 COPY --from=builder /app/admin/public /usr/share/nginx/html
 
-ENTRYPOINT ["nginx"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
